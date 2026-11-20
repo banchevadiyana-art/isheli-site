@@ -421,3 +421,30 @@ h2+.lead{margin-top:12px}
  footer .wm{margin-bottom:4px}
  .closing-ph img{max-height:62vh;object-fit:cover;width:100%}
 }
+
+/* After joining: the form steps aside, a quiet "pass it on" card appears */
+form.join.joined{display:none}
+.passon{display:grid;gap:14px;margin-top:22px;max-width:520px;opacity:0;transform:translateY(8px);transition:opacity .5s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+.passon.on{opacity:1;transform:none}
+.passon-done{display:flex;align-items:center;gap:10px;margin:0;font-size:16px}
+.passon-tick{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:#CDB497;color:#1F1B17}
+.passon-tick svg{width:15px;height:15px}
+.passon-tick path{stroke-dasharray:24;stroke-dashoffset:24;animation:tick .5s .25s ease forwards}
+.passon-card{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 14px 14px 20px;border-radius:22px;
+ background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.passon-tx{display:grid;gap:2px;min-width:0}
+.passon-tx b{font:400 22px/1.1 "Cormorant Garamond",Georgia,serif}
+.passon-tx span{font-size:13px;opacity:.8}
+.passon-btns{display:flex;gap:8px;flex:none}
+.passon-btn{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;color:inherit;background:rgba(255,255,255,.08);
+ border:1px solid rgba(255,255,255,.3);cursor:pointer;transition:background .2s,transform .2s,border-color .2s;text-decoration:none}
+.passon-btn svg{width:19px;height:19px}
+.passon-btn:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
+.passon-btn:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+.passon-btn.copied{background:#CDB497;color:#1F1B17;border-color:#CDB497}
+/* on light sections (closing, offer forms use the same component) */
+.closing .passon-card{background:var(--bg);border-color:var(--line)}
+.closing .passon-btn{background:transparent;border-color:var(--line)}
+.closing .passon-btn:hover{border-color:var(--ink)}
+@media (max-width:520px){.passon-card{padding:12px 12px 12px 16px}.passon-tx b{font-size:20px}.passon-btns{gap:6px}.passon-btn{width:40px;height:40px}}
+@media (prefers-reduced-motion:reduce){.passon{transition:none;opacity:1;transform:none}.passon-tick path{animation:none;stroke-dashoffset:0}}
