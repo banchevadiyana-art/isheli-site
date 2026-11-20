@@ -13,20 +13,20 @@
 <nav><a href="#feel">Try a practice</a><a href="#how">Inside the app</a><a href="#offer">Founding offer</a><a href="#join">Join</a></nav></header>
 <section class="hero"><img src="assets/hero.jpg" alt="A woman sitting on a sand dune at sunset, eyes closed, face turned to the light">
 <div class="in" id="join"><h1>A new era<br>of me.</h1>
-<p class="sub">For women who’ve spent years meeting everyone else’s expectations. Ten quiet minutes, every other day, to hear your own voice again — and take one small step back towards yourself.</p>
+<p class="sub">You’ve spent years meeting everyone else’s expectations. ishéli gives you ten quiet minutes, every other day, to hear your own voice again.</p>
 <form class="join" novalidate>
 <input type="email" name="email" required autocomplete="email" placeholder="Your email" aria-label="Your email">
 <button type="submit">Join the waitlist</button></form>
 <p class="note" role="status" aria-live="polite"></p>
-<p class="reassure">Free to join · no account, and your words stay on your iPhone · iPhone first, Android later: join and we’ll tell you</p>
-<div class="offer-line"><span>100 places: first year free</span><span>1,000 places: half price, first year</span><a href="#offer">How it works</a></div>
+<p class="reassure">Free to join · your words stay on your iPhone</p>
+<div class="offer-line"><span>The first 100 get a year free</span><a href="#offer">Founding places</a></div>
 </div></section>
 
 <section class="band" id="feel"><div class="wrap">
 <p class="eyebrow">Start where you are</p>
-<h2>What feels heaviest right now?</h2>
-<p class="lead">Pick the one that sounds most like you. You’ll see exactly where ishéli would begin — this is the real first practice from the app.</p>
-<div class="feel">
+<h2 class="reveal">What feels heaviest right now?</h2>
+<p class="lead">Pick one. This is a real first practice from the app.</p>
+<div class="feel" id="feel-root" style="--glow:#CDB497">
 <div class="pains" role="radiogroup" aria-label="What feels heaviest right now">
 <button type="button" role="radio" aria-checked="true" class="pain" data-k="myself-last">I keep putting myself last</button>
 <button type="button" role="radio" aria-checked="false" class="pain" data-k="own-rules">I live by rules I never chose</button>
@@ -35,7 +35,7 @@
 <button type="button" role="radio" aria-checked="false" class="pain" data-k="slow-down">Every day feels rushed</button>
 <button type="button" role="radio" aria-checked="false" class="pain" data-k="begin-new">I want to begin something new</button>
 </div>
-<div class="demo" aria-live="polite">
+<div class="demo" aria-live="polite"><span class="demo-glow" aria-hidden="true"></span>
 <div class="demo-top"><img class="demo-mark" src="assets/icon.png" alt="" width="36" height="36"><span><b id="d-title">Old rules</b><small>Chapter 1 · Inward · about 10 minutes</small></span></div>
 <div class="bub ish" id="d-insight">Some rules kept you safe once. You’ve outgrown them.</div>
 <div class="bub ish" id="d-q">Where did this rule come from?</div>
@@ -43,101 +43,104 @@
 <div class="bub her" id="d-her" hidden></div>
 <p class="demo-hint" id="d-hint" hidden>Tap an answer — there’s no wrong one.</p>
 <div class="demo-move" id="d-movebox"><small>One small thing to try</small><b id="d-move">Keep the care, drop the cost</b><span id="d-light">Write the old rule down. That’s all.</span></div>
+<div class="demo-stone" id="d-stone" aria-hidden="true"><svg viewBox="0 0 60 52"><path class="ms ms3" transform="translate(17 6) scale(.17)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z"/><path class="ms ms2" transform="translate(12 19) scale(.23)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z"/><path class="ms ms1" transform="translate(7 33) scale(.29)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z"/></svg><span>Your first stone.</span></div>
 </div>
 </div>
-<p class="feel-note">Every practice works like this: one idea, one question, your own words, one small step. Nothing to get right.</p>
+
 </div></section>
 
 <section class="band" id="how" style="background:var(--paper2)"><div class="wrap">
 <p class="eyebrow">Inside the app</p>
-<h2>Ten minutes that feel like a conversation.</h2>
-<p class="lead">No courses to binge, no feed to scroll. A new practice opens every other day, because change settles in between.</p>
+<h2 class="reveal">Ten minutes. Every other day.</h2>
 <div class="phones">
-<figure class="phone"><img src="assets/screens/today.jpg" alt="ishéli Today screen: today’s practice card, Measuring up, and a small move to try this week" loading="lazy" width="640" height="1391"><figcaption><b>One practice, picked for you</b>Today shows the next step and a small move for the week — nothing else competing for you.</figcaption></figure>
-<figure class="phone"><img src="assets/screens/breathe.jpg" alt="ishéli Breathe room: What’s happening right now? with choices like My heart is racing and I can’t switch off tonight" loading="lazy" width="640" height="1391"><figcaption><b>Calm for the moment you’re in</b>“My heart is racing.” “I can’t switch off tonight.” One minute of breathing, matched to it.</figcaption></figure>
-<figure class="phone"><img src="assets/screens/mine.jpg" alt="ishéli Mine screen: Yours, in your words — your stones and the words you kept" loading="lazy" width="640" height="1391"><figcaption><b>Proof you’re changing</b>Everything you notice is kept in your own words — so on hard days you can see how far you’ve come.</figcaption></figure>
+<figure class="phone"><img src="assets/screens/today.jpg" alt="ishéli Today screen: today’s practice card, Measuring up, and a small move to try this week" loading="lazy" width="640" height="1391"><figcaption><b>One practice, picked for you</b>Nothing else competing for you.</figcaption></figure>
+<figure class="phone"><img src="assets/screens/breathe.jpg" alt="ishéli Breathe room: What’s happening right now? with choices like My heart is racing and I can’t switch off tonight" loading="lazy" width="640" height="1391"><figcaption><b>Calm when you need it</b>One minute of breathing, matched to the moment.</figcaption></figure>
+<figure class="phone"><img src="assets/screens/mine.jpg" alt="ishéli Mine screen: Yours, in your words — your stones and the words you kept" loading="lazy" width="640" height="1391"><figcaption><b>Proof you’re changing</b>Your own words, kept, so you can see how far you’ve come.</figcaption></figure>
 </div>
 </div></section>
 
-<section class="band"><div class="wrap cairn">
-<div style="color:var(--ink)"><svg viewBox="0 0 340 400" role="img" aria-label="A cairn of stones: three placed, more to come"><ellipse cx="170" cy="392" rx="120" ry="7" fill="currentColor" opacity=".08"/><g class="drop" style="animation-delay:0.15s"><path transform="translate(101.0 321.0) scale(1.071 1.059) translate(-12 -3.3)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z" fill="#CDB497"/></g><g class="drop" style="animation-delay:0.27s"><path transform="translate(98.0 269.0) scale(0.943 0.932) translate(-12 -3.3)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z" fill="#A9BCD6"/></g><g class="drop" style="animation-delay:0.39s"><path transform="translate(118.0 223.3) scale(0.829 0.819) translate(-12 -3.3)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z" fill="#B8A8D6"/></g><g class="" ><path transform="translate(114.0 184.0) scale(0.714 0.706) translate(-12 -3.3)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z" fill="none" stroke="currentColor" stroke-opacity=".35" stroke-width="1.4" vector-effect="non-scaling-stroke"/></g><g class="" ><path transform="translate(133.0 150.1) scale(0.614 0.607) translate(-12 -3.3)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z" fill="none" stroke="currentColor" stroke-opacity=".35" stroke-width="1.4" vector-effect="non-scaling-stroke"/></g><g class="" ><path transform="translate(128.0 121.8) scale(0.514 0.508) translate(-12 -3.3)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z" fill="none" stroke="currentColor" stroke-opacity=".35" stroke-width="1.4" vector-effect="non-scaling-stroke"/></g><g class="" ><path transform="translate(146.0 98.2) scale(0.429 0.424) translate(-12 -3.3)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z" fill="none" stroke="currentColor" stroke-opacity=".35" stroke-width="1.4" vector-effect="non-scaling-stroke"/></g></svg></div>
-<div><p class="eyebrow">Built differently</p><h2>Made for women who are tired of trying harder.</h2>
-<ul class="diff">
-<li><b>Nothing resets.</b> No streaks, no missed days, no guilt. Each practice you finish places a stone; fifteen build a chapter’s cairn.</li>
-<li><b>Small on purpose.</b> About ten minutes, every other day. One step you can actually take, not a new routine to keep up.</li>
-<li><b>Your words stay yours.</b> No account. What you write stays on your iPhone — no servers, no AI reading it, nothing sold.</li>
-<li><b>No advice you didn’t ask for.</b> ishéli asks good questions. The answers are already yours.</li>
-</ul></div>
+<section class="band built"><div class="wrap cairn">
+<div class="cairn-stick" style="color:var(--ink)"><svg viewBox="0 0 340 400" role="img" aria-label="A cairn of stones, one placed for each promise"><defs><radialGradient id="cg" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--body);stop-opacity:.28"/><stop offset="1" style="stop-color:var(--body);stop-opacity:0"/></radialGradient></defs><circle class="cairn-halo" cx="170" cy="250" r="170" fill="url(#cg)"/><ellipse cx="170" cy="392" rx="120" ry="7" fill="currentColor" opacity=".08"/><path class="slot" transform="translate(101 321) scale(1.071 1.059) translate(-12 -3.3)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z"/><g class="fill" data-s="1"><path transform="translate(101 321) scale(1.071 1.059) translate(-12 -3.3)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z" fill="#CDB497"/></g><path class="slot" transform="translate(98 269) scale(0.943 0.932) translate(-12 -3.3)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z"/><g class="fill" data-s="2"><path transform="translate(98 269) scale(0.943 0.932) translate(-12 -3.3)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z" fill="#A9BCD6"/></g><path class="slot" transform="translate(118 223.3) scale(0.829 0.819) translate(-12 -3.3)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z"/><g class="fill" data-s="3"><path transform="translate(118 223.3) scale(0.829 0.819) translate(-12 -3.3)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z" fill="#B8A8D6"/></g><path class="slot" transform="translate(114 184) scale(0.714 0.706) translate(-12 -3.3)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z"/><g class="fill" data-s="4"><path transform="translate(114 184) scale(0.714 0.706) translate(-12 -3.3)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z" fill="#D9B8A0"/></g><path class="slot" transform="translate(133 150.1) scale(0.614 0.607) translate(-12 -3.3)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z"/><path class="slot" transform="translate(128 121.8) scale(0.514 0.508) translate(-12 -3.3)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z"/><path class="slot" transform="translate(146 98.2) scale(0.429 0.424) translate(-12 -3.3)" d="M151.722 40.7958C151.045 48.3656 148.475 55.4839 139.378 60.4493C130.263 65.4148 111.634 69.8073 97.0671 70.606C82.5006 71.4046 65.6597 68.3837 51.9613 65.2412C38.2628 62.0987 20.4844 57.9319 14.8592 51.7337C9.23398 45.5356 12.7411 35.5352 18.21 28.087C23.679 20.6562 34.5821 10.9857 47.7076 7.11403C60.8158 3.24236 80.9554 3.58959 96.9109 4.90909C112.866 6.22858 134.273 9.05855 143.423 15.0484C152.555 21.0208 152.399 33.2261 151.722 40.7958Z"/></svg><p class="cairn-count" aria-hidden="true"><span id="cairn-n">0</span> of 4</p></div>
+<div><p class="eyebrow">Built differently</p><h2 class="reveal">For women tired of trying harder.</h2>
+<ol class="diff">
+<li data-i="1"><span class="diff-n">01</span><div><b>Nothing resets.</b> No streaks, no guilt. Each practice places a stone.</div></li>
+<li data-i="2"><span class="diff-n">02</span><div><b>Small on purpose.</b> One step you can actually take.</div></li>
+<li data-i="3"><span class="diff-n">03</span><div><b>Your words stay yours.</b> On your iPhone. No account, nothing sold.</div></li>
+<li data-i="4"><span class="diff-n">04</span><div><b>No advice you didn’t ask for.</b> Good questions. Your own answers.</div></li>
+</ol></div>
 </div></section>
 
 <section class="band" style="background:var(--paper2)"><div class="wrap">
-<h2>A year that moves with you.</h2>
-<p class="lead" style="margin-top:14px">Four seasons of three chapters, counted from the day you begin — not from January. You start with the season you need most; Whole always comes last. Chapter 1 is free.</p>
+<h2 class="reveal">A year that moves with you.</h2>
+<p class="lead" style="margin-top:14px">Four seasons, starting the day you begin. Chapter 1 is free.</p>
 <div class="seasons">
-<article class="season" style="--a:var(--body)"><div class="ph" style="background-image:url(assets/body.jpg);background-position:center 30%"><span class="tag">3 chapters · 3 months</span></div><div class="t"><small>Body</small><h3>Come home to your body.</h3><p>Rest that actually rests you, energy past 3pm, and a pace that’s yours.</p><q>When did your body last feel like home?</q></div></article>
-<article class="season" style="--a:var(--mind)"><div class="ph" style="background-image:url(assets/mind.jpg)"><span class="tag">3 chapters · 3 months</span></div><div class="t"><small>Mind</small><h3>Clear the noise.</h3><p>Fewer loops in your head, and decisions you trust because they’re yours.</p><q>When do you feel most like yourself?</q></div></article>
-<article class="season" style="--a:var(--soul)"><div class="ph" style="background-image:url(assets/soul.jpg)"><span class="tag">3 chapters · 3 months</span></div><div class="t"><small>Soul</small><h3>Make room for joy.</h3><p>Your own rules, your own voice, and time for what you love.</p><q>Whose expectations are you living by?</q></div></article>
-<article class="season whole-card" style="--a:var(--ink)"><div class="ph" style="background-image:url(assets/whole.jpg)"><span class="tag">Always last</span></div><div class="t"><small>Whole</small><h3>All of you, together.</h3><p class="verse">Body, mind, soul. Never three things. One you, held together.</p><q>What would you hear if it all went quiet?</q></div></article>
+<article class="season" style="--a:var(--body)"><div class="ph" style="background-image:url(assets/body.jpg);background-position:center 30%"></div><div class="t"><small>Body</small><h3>Come home to your body.</h3><p>Rest that actually rests you.</p></div></article>
+<article class="season" style="--a:var(--mind)"><div class="ph" style="background-image:url(assets/mind.jpg)"></div><div class="t"><small>Mind</small><h3>Clear the noise.</h3><p>Decisions you trust.</p></div></article>
+<article class="season" style="--a:var(--soul)"><div class="ph" style="background-image:url(assets/soul.jpg)"></div><div class="t"><small>Soul</small><h3>Make room for joy.</h3><p>Your own rules, your own voice.</p></div></article>
+<article class="season whole-card" style="--a:var(--ink)"><div class="ph" style="background-image:url(assets/whole.jpg)"></div><div class="t"><small>Whole</small><h3>All of you, together.</h3><p class="verse">One you, held together.</p></div></article>
 </div>
 </div></section>
 
 
-<section class="band"><div class="wrap founder">
-<p class="eyebrow">Why ishéli</p>
-<blockquote><p>I’m Diyana, a designer in Sofia, and I’m building ishéli on my own. I made it calm on purpose: nothing to keep up with, nothing that judges a missed day, and nothing that reads what you write.</p>
-<p>If there’s something you hope it will help with, reply to my first email. I read every one, and the founding members shape what comes next.</p></blockquote>
-<p class="sig">Diyana Bancheva<small>Founder, ishéli</small></p>
+<section class="band thennow" aria-labelledby="tn-h"><div class="wrap">
+<p class="eyebrow">Fifteen practices later</p>
+<h2 class="reveal" id="tn-h">Same you. Your own rules.</h2>
+<div class="tn">
+<figure class="tn-card then reveal"><figcaption>Day 1 · the rule I lived by</figcaption><blockquote>“I rest when everything is done.”</blockquote></figure>
+<div class="tn-arrow" aria-hidden="true"><svg viewBox="0 0 60 24"><path d="M2 12h52M44 3l10 9-10 9" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/></svg></div>
+<figure class="tn-card now reveal"><figcaption>Day 29 · my own rule</figcaption><blockquote>“I rest before I’m empty.”</blockquote></figure>
+</div>
+<p class="tn-note reveal">At the end of every chapter, ishéli puts your first words beside your newest ones. An example from Chapter 1.</p>
 </div></section>
 
 <section class="band offer" id="offer"><div class="wrap">
 <p class="eyebrow">Founding members</p>
-<h2>For the people who come first.</h2>
-<p class="lead">The first members shape what ishéli becomes. As a thank-you, there are a hundred places with the whole first year free, and a thousand more at a founding price.</p>
+<h2 class="reveal">For the people who come first.</h2>
+<p class="lead">A thank-you for joining early. Your code arrives by email on launch day.</p>
 <div class="tiers">
-<article class="tier lead-tier">
-<div class="tier-n"><span>Places</span>100</div>
+<article class="tier lead-tier reveal">
+<span class="tier-ring" aria-hidden="true"></span>
+<div class="tier-n"><span class="count" data-to="100">100</span><em>places</em></div>
 <h3>Your first year, free</h3>
-<p class="tier-then">Then €49.99 a year. We’ll remind you 7 days before it ends; cancel before then and you pay nothing.</p>
-<p class="tier-code">Your code arrives by email on launch day</p>
+<p class="tier-then">Then €49.99 a year. We’ll remind you a week before it ends.</p>
+
 </article>
-<article class="tier">
-<div class="tier-n"><span>Places</span>1,000</div>
+<article class="tier reveal">
+<div class="tier-n"><span class="count" data-to="1000">1,000</span><em>places</em></div>
 <h3>€24.99 for your first year</h3>
-<p class="tier-then">Half the yearly price. Then €49.99 a year, with a reminder 7 days before it renews.</p>
-<p class="tier-code">Your code arrives by email on launch day</p>
+<p class="tier-then">Half price. Then €49.99 a year.</p>
+
 </article>
 </div>
 <ol class="offer-how">
-<li><b>Join the waitlist.</b> On launch day your founding codes arrive by email, each as a one-tap link that opens the App Store with the code filled in. They’re only sent to the list.</li>
-<li><b>Use the free-year code first, while it’s open.</b> Apple counts each redemption. When a tier’s places are gone, its code stops working — we never guess at what’s left.</li>
-<li><b>One founding code per person.</b> Chapter 1 stays free for everyone, code or not.</li>
+<li class="reveal"><span class="step">1</span><div><b>Join the waitlist.</b></div></li>
+<li class="reveal"><span class="step">2</span><div><b>Get your code on launch day.</b> One tap opens the App Store.</div></li>
+<li class="reveal"><span class="step">3</span><div><b>Start your year.</b> Chapter 1 is free for everyone.</div></li>
 </ol>
 <form class="join light-on-dark" novalidate>
 <input type="email" name="email" required autocomplete="email" placeholder="Your email" aria-label="Your email">
 <button type="submit">Save my founding place</button></form>
 <p class="note" role="status" aria-live="polite"></p>
-<p class="small">Membership renews automatically at €49.99 a year after the founding period; cancel any time in your iPhone settings. Codes are redeemed through the App Store link in the email, or in the app under Profile › Redeem a code.</p>
+<p class="small">Renews at €49.99 a year after the founding period. Cancel any time in your iPhone settings.</p>
 </div></section>
 
 <section class="band" id="faq"><div class="wrap faq">
 <h2>Questions</h2>
 <div>
-<details open><summary>Who is ishéli for?</summary><p>For women who’ve spent years meeting everyone else’s expectations and want to feel like themselves again — especially if most self-improvement apps leave you feeling behind.</p></details>
-<details><summary>What does it cost?</summary><p>Chapter 1 is free. Membership is €49.99 a year or €9.99 a month, with a 7-day free trial for new members. Founding members get their first year free (100 places) or at €24.99 (1,000 places), with a reminder 7 days before it ends. Prices may vary by country.</p></details>
-<details><summary>How much time does it take?</summary><p>About ten minutes, every other day. The Breathe room and small guides are there whenever you need a minute in between.</p></details>
-<details><summary>Is this therapy?</summary><p>No. ishéli is a companion for reflection and small changes, not medical or psychological care. If you’re struggling, please reach out to a professional — and in an emergency, call your local emergency number.</p></details>
-<details><summary>What happens to what I write?</summary><p>It stays on your iPhone. There’s no account and no server that reads it. Lock it with Face ID, export it, or delete everything any time.</p></details>
-<details><summary>When can I download it? Android?</summary><p>Soon, on iPhone first. Join the waitlist and you’ll hear first, with your founding codes inside. Android comes later — join now and you’ll get an email the day it’s ready.</p></details>
+<details open><summary>What does it cost?</summary><p>Chapter 1 is free. Membership is €49.99 a year or €9.99 a month, with 7 days free to try. Founding members pay less for their first year.</p></details>
+<details><summary>Is this therapy?</summary><p>No. ishéli is a companion for reflection, not medical or psychological care. In an emergency, call your local emergency number.</p></details>
+<details><summary>What happens to what I write?</summary><p>It stays on your iPhone. No account, no server reading it. Delete everything any time.</p></details>
+<details><summary>When can I get it? Android?</summary><p>Soon, on iPhone first. Android later: join and you’ll hear the day it’s ready.</p></details>
 </div></div></section>
 
 <section class="band closing" style="background:var(--paper2)"><div class="wrap closing-wrap">
 <figure class="closing-ph"><img src="assets/closing.jpg" alt="A woman in her fifties with silver hair, eyes closed, face turned to the light" loading="lazy" width="800" height="1000"></figure>
 <div class="closing-tx">
-<h2>Begin when you’re ready.</h2><p class="lead" style="margin:14px 0 22px">One email when ishéli launches, with your founding codes. Then one quiet letter a month — an idea and one small thing to try.</p>
+<h2 class="reveal">Begin when you’re ready.</h2><p class="lead" style="margin:14px 0 22px">One email on launch day. Then one quiet letter a month.</p>
 <form class="join light" novalidate>
 <input type="email" name="email" required autocomplete="email" placeholder="Your email" aria-label="Your email">
 <button type="submit">Join the waitlist</button></form>
-<p class="note" role="status" aria-live="polite"></p><p class="listnote">Your email is used only for these letters. Unsubscribe in one click. Never sold or shared. <a href="privacy.html#our-website-and-waitlist">Privacy</a></p>
+<p class="note" role="status" aria-live="polite"></p><p class="listnote">Unsubscribe in one click. Never sold. <a href="privacy.html#our-website-and-waitlist">Privacy</a></p>
 </div>
 </div></section>
 <footer class="band"><div class="wrap">
@@ -150,7 +153,7 @@
 <p>© 2026 Diyana Bancheva · Sofia, Bulgaria · <a href="mailto:hello@isheli.app">hello@isheli.app</a></p></div>
 <nav><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="wellbeing.html">Wellbeing &amp; safety</a><a href="support.html">Support</a><a href="#" data-consent-settings>Cookie settings</a></nav>
 </div></footer><script>{
-const FORM_ID = "";
+const FORM_ID = "cmwpfi21z01la0jyw6uijipj7";
 /* Real first practices from the app (isheli-content.json, chapter Inward), keyed by onboarding intention. */
 const P={
  "myself-last":["Old rules","Some rules kept you safe once. You’ve outgrown them.","Where did this rule come from?",["childhood","school","my first job","a relationship","not sure"],"Keep the care, drop the cost","Write the old rule down. That’s all."],
@@ -163,7 +166,7 @@ const P={
 let picked="myself-last";
 const $=id=>document.getElementById(id);
 const demo=document.querySelector('.demo');
-function resetAnswer(){ $('d-her').hidden=true; $('d-movebox').classList.add('wait'); $('d-hint').hidden=false;
+function resetAnswer(){ const st=document.querySelector('#d-stone .ms1'); if(st) st.classList.remove('on'); $('d-her').hidden=true; $('d-movebox').classList.add('wait'); $('d-hint').hidden=false;
   $('d-opts').querySelectorAll('button').forEach(b=>{b.setAttribute('aria-pressed','false')}); }
 function wireOpts(){ $('d-opts').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
   $('d-opts').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));
@@ -171,6 +174,7 @@ function wireOpts(){ $('d-opts').querySelectorAll('button').forEach(b=>b.addEven
   $('d-her').hidden=false; $('d-hint').hidden=true;
   window.ishTrack&&ishTrack('demo_answer',{pain:picked});
   const m=$('d-movebox'); m.classList.remove('wait'); m.classList.remove('swap'); void m.offsetWidth; m.classList.add('swap');
+  const st=document.querySelector('#d-stone .ms1'); st.classList.remove('on'); void st.getBoundingClientRect(); setTimeout(()=>st.classList.add('on'),450);
 })); }
 function render(k){
   const d=P[k]; if(!d) return; picked=k;
@@ -179,7 +183,26 @@ function render(k){
   d[3].concat(['something else']).forEach((t,i,a)=>{const b=document.createElement('button');b.type='button';b.textContent=t;if(i===a.length-1)b.className='else';o.appendChild(b)});
   $('d-move').textContent=d[4]; $('d-light').textContent=d[5];
   wireOpts(); resetAnswer();
-  demo.classList.remove('swap'); void demo.offsetWidth; demo.classList.add('swap');
+  $('feel-root').style.setProperty('--glow',GLOW[k]||'#CDB497');
+  converse();
+}
+const GLOW={"myself-last":"#CDB497","own-rules":"#B8A8D6","say-what-i-think":"#D9B8A0","know-myself":"#A9BCD6","slow-down":"#BFCBB4","begin-new":"#E3C79A"};
+const calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let talk=0;
+function converse(){
+  const id=++talk, ins=$('d-insight'), q=$('d-q'), o=$('d-opts');
+  if(calm) return;
+  [ins,q].forEach(e=>e.classList.add('pre')); o.classList.add('pre-btn'); $('d-hint').hidden=true;
+  const dots=()=>{const t=document.createElement('div');t.className='typing';t.innerHTML='<i></i><i></i><i></i>';return t};
+  const step=(el,after,wait)=>new Promise(r=>{ if(id!==talk) return;
+    const t=dots(); after.after(t);
+    setTimeout(()=>{ t.remove(); if(id!==talk) return; el.classList.remove('pre'); r(); },wait)});
+  const top=document.querySelector('.demo-top');
+  step(ins,top,650).then(()=>step(q,ins,750)).then(()=>{ if(id!==talk) return;
+    o.querySelectorAll('button').forEach((b,i)=>{b.style.transitionDelay=(i*60)+'ms'});
+    o.classList.remove('pre-btn');
+    setTimeout(()=>{ if(id===talk){ o.querySelectorAll('button').forEach(b=>b.style.transitionDelay=''); if($('d-her').hidden) $('d-hint').hidden=false } },700);
+  });
 }
 document.querySelectorAll('.pain').forEach(b=>b.addEventListener('click',()=>{
   document.querySelectorAll('.pain').forEach(x=>x.setAttribute('aria-checked',x===b?'true':'false'));
@@ -187,6 +210,27 @@ document.querySelectorAll('.pain').forEach(b=>b.addEventListener('click',()=>{
   window.ishTrack&&ishTrack('demo_choose',{pain:b.dataset.k});
 }));
 wireOpts(); resetAnswer();
+document.querySelectorAll('.pain').forEach(p=>p.addEventListener('pointermove',e=>{const r=p.getBoundingClientRect();p.style.setProperty('--x',(e.clientX-r.left)+'px');p.style.setProperty('--y',(e.clientY-r.top)+'px')}));
+(function(){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target) } }),{rootMargin:'0px 0px -12% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>calm?el.classList.add('in'):io.observe(el));
+  // Built differently: each promise places a stone
+  const items=[...document.querySelectorAll('.diff li')], fills=[...document.querySelectorAll('.cairn .fill')], stick=document.querySelector('.cairn-stick'), n=document.getElementById('cairn-n');
+  let placed=0;
+  const place=k=>{ if(k<=placed) return; placed=k;
+    fills.forEach(f=>f.classList.toggle('on',+f.dataset.s<=k)); items.forEach(li=>li.classList.toggle('on',+li.dataset.i<=k));
+    if(n) n.textContent=k; if(k>=1) stick.classList.add('lit'); };
+  if(calm||!('IntersectionObserver' in window)) place(4);
+  else { const io2=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) place(+e.target.dataset.i) }),{rootMargin:'-15% 0px -35% 0px'}); items.forEach(li=>io2.observe(li)); }
+  // Founding places count up once
+  const fmt=v=>v.toLocaleString('en-GB');
+  const io3=new IntersectionObserver(es=>es.forEach(e=>{ if(!e.isIntersecting) return; io3.unobserve(e.target);
+    const el=e.target, to=+el.dataset.to, t0=performance.now(), d=1400;
+    const tick=t=>{ const p=Math.min(1,(t-t0)/d), ease=1-Math.pow(1-p,3); el.textContent=fmt(Math.round(to*ease)); if(p<1) requestAnimationFrame(tick) };
+    el.textContent='0'; requestAnimationFrame(tick); }),{threshold:.6});
+  if(!calm) document.querySelectorAll('.count').forEach(c=>io3.observe(c));
+  if(!calm){ const io4=new IntersectionObserver(es=>{ if(es[0].isIntersecting){ io4.disconnect(); converse() } },{threshold:.45}); io4.observe(demo); }
+})();
 function shareBox(note){
   const url=location.href.split('#')[0];
   const wrap=document.createElement('div'); wrap.className='share';
@@ -199,20 +243,56 @@ function shareBox(note){
   });
   wrap.appendChild(btn); note.after(wrap);
 }
+/* Toast: the on-page confirmation after an action. Polite for screen readers, dismissable, auto-hides. */
+const toast=(()=>{ let el, timer;
+  return (title, line, kind='ok')=>{
+    if(!el){ el=document.createElement('div'); el.className='toast'; el.setAttribute('role','status'); el.setAttribute('aria-live','polite'); document.body.appendChild(el); }
+    clearTimeout(timer);
+    const icon = kind==='ok'
+      ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+      : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v6M12 16.5v.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+    el.className='toast '+kind;
+    el.innerHTML='<span class="toast-ic">'+icon+'</span><div class="toast-tx"><b class="toast-t"></b><span class="toast-l"></span></div><button type="button" aria-label="Close">×</button>';
+    el.querySelector('.toast-t').textContent=title; el.querySelector('.toast-l').textContent=line;
+    el.querySelector('button').onclick=()=>{el.classList.remove('on')};
+    requestAnimationFrame(()=>requestAnimationFrame(()=>el.classList.add('on')));
+    timer=setTimeout(()=>el.classList.remove('on'), kind==='ok'?7000:6000);
+  };
+})();
+const PREVIEW = /[?&]preview=1/.test(location.search);   // lets us show the success state before the form is connected
 document.querySelectorAll('form.join').forEach(f=>{
-  const note=f.nextElementSibling;
+  const note=f.nextElementSibling, input=f.email, btn=f.querySelector('button');
+  const label=btn.textContent;
+  const busy=on=>{ btn.disabled=on; btn.classList.toggle('busy',on); btn.setAttribute('aria-busy',on); btn.textContent=on?'Saving…':label; };
+  const bad=msg=>{ input.setAttribute('aria-invalid','true'); note.textContent=msg; input.focus(); };
+  input.addEventListener('input',()=>{ if(input.getAttribute('aria-invalid')){ input.removeAttribute('aria-invalid'); note.textContent=''; } });
+  const done=already=>{
+    note.textContent='';
+    toast(already?'You’re already on the list':'You’re on the list', already?'Nothing else to do. Your founding codes come on launch day.':'Check your inbox and tap “Confirm” — then your founding place is saved.');
+    window.ishTrack&&ishTrack('generate_lead',{method:'waitlist',pain:picked});
+    f.reset(); f.classList.add('joined');
+    if(!f.parentNode.querySelector('.share')) shareBox(note);
+  };
   f.addEventListener('submit',async e=>{
     e.preventDefault();
-    const email=f.email.value.trim();
-    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){note.textContent='Please check your email address.';return}
-    if(!FORM_ID){note.textContent='Sign-ups open when this site goes live. Thank you for wanting in.';return}
-    note.textContent='One moment…';
+    if(btn.disabled) return;
+    const email=input.value.trim();
+    if(!email) return bad('Add your email to save your place.');
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(email)) return bad('That email doesn’t look quite right. Please check it.');
+    if(!FORM_ID && !PREVIEW){ toast('Almost ready','Sign-ups open in a few days. Please come back soon.','warn'); return; }
+    busy(true);
     try{
-      const body='email='+encodeURIComponent(email)+'&source=website&userGroup='+encodeURIComponent(picked);
+      if(!FORM_ID){ await new Promise(r=>setTimeout(r,700)); done(false); return; }
+      const body='email='+encodeURIComponent(email)+'&userGroup='+encodeURIComponent(picked||'website')+'&mailingLists=';
       const r=await fetch('https://app.loops.so/api/newsletter-form/'+FORM_ID,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body});
-      if(r.ok){note.textContent='You’re on the list. Check your inbox to confirm — your founding codes come on launch day.'; window.ishTrack&&ishTrack('generate_lead',{method:'waitlist',pain:picked}); f.reset(); if(!f.parentNode.querySelector('.share')) shareBox(note)}
-      else note.textContent='That didn’t go through. Please try again in a moment.';
-    }catch(_){note.textContent='That didn’t go through. Please try again in a moment.'}
+      let data={}; try{ data=await r.json() }catch(_){}
+      const msg=(data.message||'').toLowerCase();
+      if(r.ok && data.success!==false) done(false);
+      else if(msg.includes('already')) done(true);
+      else if(r.status===429) toast('One moment','Lots of sign-ups right now. Please try again in a minute.','warn');
+      else toast('That didn’t go through','Please try again in a moment, or write to hello@isheli.app.','warn');
+    }catch(_){ toast('That didn’t go through','Check your connection and try again.','warn'); }
+    finally{ busy(false); }
   });
 });
 }</script></body></html>
