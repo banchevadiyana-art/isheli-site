@@ -1,0 +1,220 @@
+@font-face{font-family:"Cormorant Garamond";src:url(fonts/CormorantGaramond.woff2) format("woff2");font-weight:300 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Cormorant Garamond";src:url(fonts/CormorantGaramond-Italic.woff2) format("woff2");font-weight:300 700;font-style:italic;font-display:swap}
+@font-face{font-family:"DM Sans";src:url(fonts/DMSans.woff2) format("woff2");font-weight:100 1000;font-style:normal;font-display:swap}
+
+/* VOICE  quiet, warm, editorial — one person writing to one person
+   IDEA   a cairn: each small practice is a stone placed on the last
+   PICTURE the welcome photograph full-bleed, and a hand-drawn cairn of the app's own pebble
+   COLOUR Paper #FBF8F3, cocoa ink, the three area tones (Body tan, Mind blue, Soul lilac)
+   TYPE   Cormorant Garamond for voice, DM Sans for reading */
+:root{color-scheme:light dark;
+ --bg:light-dark(#FBF8F3,#16130F);--paper2:light-dark(#F3EEE6,#1E1A15);--ink:light-dark(#1F1B17,#F1ECE4);
+ --soft:light-dark(#6E655B,#B9AFA3);--line:light-dark(#E6DFD4,#2E2821);
+ --body:#CDB497;--mind:#A9BCD6;--soul:#B8A8D6;--btn:light-dark(#1F1B17,#F1ECE4);--btnink:light-dark(#FBF8F3,#16130F)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 "DM Sans",system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400}
+.band{padding:clamp(40px,6vw,96px) max(6vw,20px)}
+.wrap{max-width:1180px;margin:0 auto}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;line-height:1.05;text-wrap:balance;margin:0}
+h2{font-size:clamp(34px,4.6vw,52px)}
+h3{font-size:26px;line-height:1.15}
+p{margin:0}
+.lead{font-size:18px;color:var(--soft);max-width:34em}
+/* top bar */
+.top{position:absolute;inset:0 0 auto 0;display:flex;align-items:center;justify-content:space-between;padding:22px max(6vw,20px);z-index:2;color:#F6F1EA}
+.wm{height:28px;width:auto;display:block;color:currentColor}
+.top nav{display:flex;gap:22px;font-size:15px}.top nav a{text-decoration:none;opacity:.9}
+/* hero */
+.hero{position:relative;min-height:min(92vh,860px);display:grid;align-items:end;color:#F6F1EA;overflow:hidden;background:#2a241f}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,12,.25) 0%,rgba(20,16,12,.1) 35%,rgba(20,16,12,.78) 100%)}
+.hero .in{position:relative;z-index:1;padding:0 max(6vw,20px) clamp(36px,6vw,72px);max-width:1180px;width:100%;margin:0 auto}
+.hero h1{font-size:clamp(52px,9vw,112px);letter-spacing:-.01em}
+.hero p.sub{font-size:19px;max-width:30em;margin-top:14px;opacity:.92}
+form.join{display:flex;gap:10px;margin-top:26px;max-width:520px;flex-wrap:wrap}
+form.join input{flex:1 1 220px;height:52px;border-radius:26px;border:1px solid rgba(255,255,255,.45);background:rgba(255,255,255,.14);color:inherit;padding:0 20px;font:16px "DM Sans",sans-serif;backdrop-filter:blur(8px)}
+form.join input::placeholder{color:rgba(246,241,234,.75)}
+form.join button,.btn{height:52px;padding:0 26px;border-radius:26px;border:0;background:#F6F1EA;color:#1F1B17;font:600 16px "DM Sans",sans-serif;cursor:pointer}
+.btn.dark{background:var(--btn);color:var(--btnink);display:inline-flex;align-items:center;text-decoration:none}
+form.join.light input{border-color:var(--line);background:var(--bg);color:var(--ink)}
+form.join.light input::placeholder{color:var(--soft)}
+form.join.light button{background:var(--btn);color:var(--btnink)}
+:focus-visible{outline:2px solid var(--mind);outline-offset:3px}
+.note{font-size:14px;margin-top:12px;opacity:.85;min-height:1.4em}
+.offer-line{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:18px;font-size:14px;opacity:.9}
+.offer-line span::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--body);margin-right:8px;vertical-align:1px}
+.offer-line span:nth-child(2)::before{background:var(--soul)}
+/* how it works */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:40px}
+.step{background:var(--paper2);border-radius:24px;padding:26px}
+.step .n{font-family:"Cormorant Garamond",serif;font-size:40px;color:var(--soft);line-height:1}
+.step h3{margin:14px 0 8px}
+.step p{color:var(--soft)}
+.chat{margin-top:18px;display:grid;gap:8px;font-size:14px}
+.bub{padding:10px 14px;border-radius:18px;max-width:88%}
+.bub.ish{background:#EADBC8;color:#1F1B17}.bub.her{background:var(--bg);justify-self:end;border:1px solid var(--line)}
+/* cairn */
+.cairn{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:center}
+.cairn svg{width:100%;max-width:340px;height:auto;display:block;margin:0 auto}
+/* seasons */
+.seasons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:40px}
+.season{border-radius:22px;overflow:hidden;background:var(--paper2)}
+.season .ph{aspect-ratio:4/5;background-size:cover;background-position:center}
+.season .ph.whole{background:linear-gradient(160deg,var(--body),var(--mind) 55%,var(--soul))}
+.season div.t{padding:16px 18px 20px}
+.season small{font-size:13px;color:var(--soft)}
+.season h3{margin-top:2px}
+/* offer */
+.offer{background:#1F1B17;color:#F6F1EA}
+.offer .small{opacity:.7;font-size:14px;margin-top:22px}
+/* privacy promise + faq */
+.promise{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:start}
+.promise ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.promise li{padding:14px 18px;border-radius:16px;background:var(--paper2)}
+details{border-top:1px solid var(--line);padding:18px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--soft);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--soft);margin-top:10px;max-width:42em}
+/* footer */
+footer{border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px 40px;justify-content:space-between;font-size:14px;color:var(--soft)}
+footer nav{display:flex;flex-wrap:wrap;gap:10px 22px}
+footer .wm{height:22px;color:var(--ink)}
+/* legal pages */
+.doc{max-width:720px;margin:0 auto;padding:clamp(32px,6vw,80px) 20px}
+.doc header{display:flex;justify-content:space-between;align-items:center;margin-bottom:40px}
+.doc header .wm{color:var(--ink);height:24px}
+.doc h1{font-size:clamp(40px,6vw,56px);margin-bottom:8px}
+.doc h2{font-size:28px;margin:36px 0 10px}
+.doc p,.doc li{color:var(--ink);opacity:.88}
+.doc p+p{margin-top:12px}
+.doc ul{padding-left:20px;display:grid;gap:6px}
+.doc table{border-collapse:collapse;width:100%;font-size:15px}.doc td,.doc th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left}
+@media(max-width:860px){.steps,.seasons{grid-template-columns:repeat(2,minmax(0,1fr))}.cairn,.promise{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:560px){.steps,.seasons,.offer .tiers{grid-template-columns:minmax(0,1fr)}.top nav a:not(:last-child){display:none}}
+@media(prefers-reduced-motion:no-preference){.drop{animation:drop .7s cubic-bezier(.2,.8,.3,1.2) both}}
+@keyframes drop{from{transform:translateY(-40px);opacity:0}to{transform:none;opacity:1}}
+
+.whole-band{background:var(--paper2)}
+.whole-wrap{max-width:640px}
+.whole-eye{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);margin:0 0 18px}
+.whole-title{font-size:clamp(72px,12vw,128px);letter-spacing:-.01em;line-height:.9;margin:0 0 28px}
+.whole-verse{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(19px,2.2vw,23px);line-height:1.5;border-left:1px solid var(--line);padding-left:20px;margin:0}
+.whole-verse em{display:block;margin-top:18px;color:var(--soft)}
+
+.offer .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.65;margin:0 0 14px}
+.offer .lead{color:rgba(246,241,234,.8);margin-top:14px}
+.offer .tiers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:34px}
+.offer .tier{border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:10px}
+.offer .lead-tier{background:#F6F1EA;color:#1F1B17;border-color:#F6F1EA}
+.offer .tier-n{font-family:"Cormorant Garamond",Georgia,serif;font-size:56px;line-height:.95}
+.offer .tier-n span{display:block;font:500 12px/1 "DM Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:10px}
+.offer .tier h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:30px;line-height:1.1;margin-top:8px}
+.offer .tier-then{opacity:.8;font-size:15px}
+.offer .tier-code{margin-top:auto;padding-top:14px;font-size:13px;letter-spacing:.06em;opacity:.75}
+.offer .tier-code b{font-weight:500;letter-spacing:.1em}
+.offer-how{margin:30px 0 0;padding-left:20px;max-width:46em;display:grid;gap:10px;color:rgba(246,241,234,.85)}
+.offer-how b{color:#F6F1EA;font-weight:500}
+.offer form.join{margin-top:30px}
+.offer-line a{color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:.85}
+@media(max-width:560px){.offer .tiers{grid-template-columns:minmax(0,1fr)}.offer .tier-n{font-size:48px}}
+@media(min-width:900px){
+.hero{background:linear-gradient(180deg,#58776f 0%,#69806f 45%,#857a5c 75%,#6f5640 100%)}
+.hero img{left:auto;right:0;width:min(64%,900px);object-position:50% 24%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);mask-image:linear-gradient(90deg,transparent 0,#000 30%)}
+.hero::after{background:linear-gradient(180deg,rgba(20,16,12,.18) 0%,rgba(20,16,12,.05) 40%,rgba(20,16,12,.6) 100%)}
+}
+
+/* landing v2 */
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);margin:0 0 14px}
+.hero .reassure{font-size:14px;opacity:.85;margin-top:12px}
+.feel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(20px,4vw,48px);margin-top:36px;align-items:start}
+.pains{display:flex;flex-wrap:wrap;gap:10px;align-content:flex-start}
+.pain{font:16px "DM Sans",sans-serif;padding:12px 18px;border-radius:24px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;text-align:left;transition:background .2s,border-color .2s}
+.pain:hover{border-color:var(--soft)}
+.pain[aria-checked=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.pain:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.demo{background:var(--paper2);border-radius:28px;padding:24px;display:grid;gap:10px}
+.demo.swap{animation:demoIn .35s ease}
+@keyframes demoIn{from{opacity:.3;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.demo.swap{animation:none}}
+.demo-top{display:flex;gap:12px;align-items:center;margin-bottom:6px}
+.demo-top b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:24px;line-height:1.1}
+.demo-top small{color:var(--soft);font-size:13px}
+.demo-mark{width:36px;height:36px;border-radius:50%;flex:none;object-fit:cover;background:#EADBC8}
+.demo .bub{font-size:15px;max-width:92%}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 6px}
+.opts span{font-size:14px;padding:8px 14px;border-radius:18px;background:var(--bg);border:1px solid var(--line)}
+.demo-move{background:var(--bg);border-radius:18px;padding:16px 18px;display:grid;gap:4px;margin-top:4px}
+.demo-move small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.demo-move b{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:22px}
+.demo-move span{color:var(--soft);font-size:14px}
+.feel-note{color:var(--soft);margin-top:22px;max-width:40em}
+.phones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,3vw,36px);margin-top:40px}
+.phone{margin:0}
+.phone img{width:100%;height:auto;display:block;border-radius:34px;border:8px solid #1F1B17;box-shadow:0 24px 48px -24px rgba(31,27,23,.35);background:#1F1B17}
+.phone figcaption{margin-top:18px;color:var(--soft);font-size:15px}
+.phone figcaption b{display:block;color:var(--ink);font-weight:500;margin-bottom:4px;font-size:16px}
+.diff{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px}
+.diff li{padding:16px 18px;border-radius:16px;background:var(--paper2);color:var(--soft)}
+.diff b{color:var(--ink);font-weight:500}
+.founder{max-width:720px}
+.founder blockquote{margin:0;font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(22px,2.6vw,28px);line-height:1.4}
+.founder blockquote p+p{margin-top:16px}
+.founder .sig{margin-top:22px;font-weight:500}
+.founder .sig small{display:block;color:var(--soft);font-weight:400;font-size:14px}
+.faq{display:grid;grid-template-columns:minmax(0,.6fr) minmax(0,1.4fr);gap:clamp(24px,5vw,72px);align-items:start}
+.share{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px;font-size:14px}
+.share button{height:38px;padding:0 16px;border-radius:19px;border:1px solid currentColor;background:transparent;color:inherit;font:500 14px "DM Sans",sans-serif;cursor:pointer}
+@media(max-width:860px){.feel,.faq{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:700px){.phones{grid-template-columns:minmax(0,1fr);max-width:340px;margin-left:auto;margin-right:auto}}
+.offer .eyebrow{color:inherit}
+
+/* seasons v2 */
+.season{display:flex;flex-direction:column}
+.season .ph{position:relative}
+.season .tag{position:absolute;left:12px;top:12px;font-size:12px;padding:6px 10px;border-radius:14px;background:rgba(251,248,243,.88);color:#1F1B17}
+.season small{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+.season div.t small::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--a);margin-right:8px;vertical-align:1px}
+.season h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:26px;line-height:1.1;margin:8px 0 8px}
+.season p{color:var(--soft);font-size:15px;margin:0}
+.season q{display:block;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:18px;line-height:1.3}
+.season q::before{content:"“"}.season q::after{content:"”"}
+.season .ph.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;background:var(--paper2)}
+.season .ph.tri span:not(.tag){background-size:cover;background-position:center}
+.whole-card{background:var(--paper2)}
+@media(max-width:560px){.season .ph{aspect-ratio:4/3}}
+
+/* landing v3: demo answers, readability */
+.opts button{font:15px "DM Sans",sans-serif;padding:9px 15px;border-radius:18px;background:var(--bg);border:1px solid var(--line);color:var(--ink);cursor:pointer}
+.opts button:hover{border-color:var(--soft)}
+.opts button[aria-pressed=true]{background:#EADBC8;border-color:#CDB497;color:#1F1B17}
+.opts button.else{border-style:dashed}
+.opts button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.demo .bub.her{justify-self:end;background:var(--bg);border:1px solid var(--line)}
+.demo-hint{font-size:15px;color:var(--soft);margin:0}
+.demo-move.wait{display:none}
+.demo-move.swap{animation:demoIn .35s ease}
+@media (prefers-reduced-motion:reduce){.demo-move.swap{animation:none}}
+.listnote{font-size:15px;color:var(--soft);margin-top:12px}
+.season p.verse{font-family:"Cormorant Garamond",Georgia,serif;font-size:19px;line-height:1.4;color:var(--ink)}
+/* readability floor (Elena): secondary text 15px, labels 13px, full-contrast terms */
+.hero .reassure{font-size:15px;opacity:.92}
+.offer-line{font-size:15px}
+.eyebrow,.offer .eyebrow,.season small,.whole-eye{font-size:13px}
+.demo-top small,.demo-move span,.feel-note,.phone figcaption{font-size:15px}
+.demo-move small{font-size:13px}
+.offer .tier-code{font-size:14px;opacity:.85;letter-spacing:.02em}
+.offer .small{font-size:15px;opacity:.9;line-height:1.55}
+.offer .tier-then{font-size:16px;opacity:.9}
+.season .tag{font-size:13px}
+.season p{font-size:16px}
+footer .wrap{font-size:15px}
+.note{font-size:15px}
+.share{font-size:15px}
+.hero .reassure{max-width:36em}
