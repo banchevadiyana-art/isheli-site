@@ -218,3 +218,10 @@ footer .wrap{font-size:15px}
 .note{font-size:15px}
 .share{font-size:15px}
 .hero .reassure{max-width:36em}
+
+/* closing section with portrait */
+.closing-wrap{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,5vw,72px);align-items:center}
+.closing-ph{margin:0}
+.closing-ph img{width:100%;height:auto;display:block;border-radius:24px}
+.closing-tx form.join{margin-top:0}
+@media(max-width:760px){.closing-wrap{grid-template-columns:minmax(0,1fr)}.closing-ph{max-width:420px}}
