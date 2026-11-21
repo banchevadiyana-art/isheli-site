@@ -4,14 +4,14 @@ const wait=ms=>new Promise(r=>setTimeout(r,ms));
 const LIVE = location.hostname==='isheli.app' || location.hostname==='www.isheli.app';
 const FORM_ID="cmwpfi21z01la0jyw6uijipj7";
 
-/* Real first practices from the app (chapter Inward), keyed by onboarding intention */
+/* First practices (based on the app’s chapter Inward), keyed by onboarding intention */
 const P={
- "myself-last":["Old rules","Some rules kept you safe once. You’ve outgrown them.","Where did this rule come from?",["childhood","school","my first job","a relationship","not sure"],"Keep the care, drop the cost","Write the old rule down. That’s all."],
- "own-rules":["Whose voice is this?","Some rules helped you become who you are. Do they still fit?","Whose expectations are you living by?",["my parents","my partner","my manager","people online","an older version of me"],"Say “let me check first”","Write the rule down. That’s all for today."],
- "say-what-i-think":["The yes you didn’t mean","Rules get tested by one small word — yes.","Where did it show up since last time?",["at work","at home","with people","alone","not sure"],"Say “let me get back to you”","Notice one yes. Nothing else."],
- "know-myself":["What you do when no one’s watching","Who are you when no one is watching?","When do you feel most like yourself?",["alone in the morning","walking","with one close friend","making something"],"Do it with someone home","Do it once, just for you."],
- "slow-down":["An ordinary day you’d keep","Slow isn’t the same as behind.","Which part of your day feels rushed for no reason?",["mornings","work","evenings","weekends"],"Wait ten minutes","Do one thing slowly today."],
- "begin-new":["A note to yourself, now","Most beginnings start before we feel ready.","What would you begin if no one were judging?",["a side project","a new routine","a creative habit","a different kind of work"],"Ten minutes, today","Write one line to yourself."]
+ "myself-last":["Old rules","Some rules kept you safe once. You’ve outgrown them.","Where did this rule come from?",["childhood","school","my first job","a relationship","not sure"],"Put one thing for you first","Before you help anyone today, take five minutes that are only yours."],
+ "own-rules":["Whose voice is this?","Some rules helped you become who you are. Do they still fit?","Whose expectations are you living by?",["my parents","my partner","my manager","people online","an older version of me"],"Name one rule that isn’t yours","Write it down. You don’t have to change it yet."],
+ "say-what-i-think":["The yes you didn’t mean","Rules get tested by one small word — yes.","Where did it show up since last time?",["at work","at home","with people","alone","not sure"],"Give yourself a moment before yes","Next time someone asks, try “Let me get back to you.”"],
+ "know-myself":["What you do when no one’s watching","Who are you when no one is watching?","When do you feel most like yourself?",["alone in the morning","walking","with one close friend","making something"],"Do one thing the old you loved","Even for ten minutes. Notice how it feels."],
+ "slow-down":["An ordinary day you’d keep","Slow isn’t the same as behind.","Which part of your day feels rushed for no reason?",["mornings","work","evenings","weekends"],"Do one thing slowly","Your coffee, a walk, a shower. Just one, at its own pace."],
+ "begin-new":["A note to yourself, now","Most beginnings start before we feel ready.","What would you begin if no one were judging?",["a side project","a new routine","a creative habit","a different kind of work"],"Take the smallest first step","Ten minutes today. Write down what you’d begin."]
 };
 const REFLECT={"myself-last":"You don’t have to earn rest. Let’s start with one moment that belongs to you.","own-rules":"You can keep the rules that still help and let the others go. You decide which.","say-what-i-think":"A pause before yes isn’t rude. It’s room for your own answer.","know-myself":"She’s still there. We’ll find her again in small, ordinary moments.","slow-down":"You don’t need a slower life to have one slow moment.","begin-new":"You don’t have to feel ready. You only have to begin small."};
 /* Echo lines from the app’s library */
@@ -43,11 +43,12 @@ function siteToast(t,d){const el=$('#site-toast');el.innerHTML='<b>'+t+'</b>'+d;
 let picked='myself-last';
 $$('.chip').forEach(c=>c.addEventListener('click',()=>{
   $$('.chip').forEach(x=>x.setAttribute('aria-checked',x===c));
-  picked=c.dataset.k; const line=$('#moment-line'); line.classList.add('fade');
-  setTimeout(()=>{line.textContent=REFLECT[picked];$('#moment-title').textContent=P[picked][0];$('#moment-ph').style.backgroundImage='url(assets/img/'+(IMG[picked]||'mind')+'.jpg)';line.classList.remove('fade')},300);
+  picked=c.dataset.k; window.ishTrack&&ishTrack('try_feeling_selected'); const line=$('#moment-line'); line.classList.add('fade');
+  setTimeout(()=>{line.textContent=REFLECT[picked];$('#moment-title').textContent=P[picked][0];$('#moment-ph').style.backgroundImage='url(assets/img/'+(IMG[picked]||'mind')+'.jpg)';$('#moment-try-t').textContent=P[picked][4]+'.';$('#moment-try-d').textContent=P[picked][5];line.classList.remove('fade')},300);
   App.setPractice(picked);
 }));
 $('#moment-begin').addEventListener('click',()=>{
+  window.ishTrack&&ishTrack('try_begin_clicked');
   $('#app').scrollIntoView({behavior:'smooth'});
   yours=true; stopLoop(); setTimeout(()=>{App.reset(true);App.openPractice()},900);
 });
@@ -64,10 +65,10 @@ $$('form.join').forEach(f=>{
     try{
       if(!LIVE){await wait(700);siteToast('Preview: you’re on the list','On the live site this sends a confirmation email. Nothing was sent from this preview.');}
       else{
-        const body='email='+encodeURIComponent(email)+'&userGroup='+encodeURIComponent(picked||'website')+'&mailingLists=';
+        const body='email='+encodeURIComponent(email)+'&userGroup=website'+'&mailingLists=';
         const r=await fetch('https://app.loops.so/api/newsletter-form/'+FORM_ID,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body});
         let d={};try{d=await r.json()}catch(_){}
-        if(r.ok&&d.success!==false){ siteToast('You’re on the list','Check your inbox and tap “Confirm” — then your founding place is saved.'); window.ishTrack&&ishTrack('generate_lead',{method:'waitlist',pain:picked}); }
+        if(r.ok&&d.success!==false){ siteToast('You’re on the list','Check your inbox and tap “Confirm” — then your founding place is saved.'); window.ishTrack&&ishTrack('generate_lead',{method:'waitlist',demo_completed:!!window.__ishDemoDone}); }
         else if((d.message||'').toLowerCase().includes('already')) siteToast('You’re already on the list','Nothing else to do. Your founding code comes on launch day.');
         else siteToast('That didn’t go through','Please try again in a moment, or write to hello@isheli.app.');
       }
@@ -180,6 +181,8 @@ App.init();
 
 function stepsLive(k){const ol=$('.app-steps');ol.classList.toggle('live',!!k);$$('li',ol).forEach(li=>li.classList.toggle('on',li.dataset.step===k))}
 
+/* measure meaningful completion only (a real person placing the stone), never what she types */
+$('#st-stone').addEventListener('click',e=>{ if(e.isTrusted){ window.__ishDemoDone=true; window.ishTrack&&ishTrack('demo_practice_completed'); } });
 /* ---------- autoplay loop: plays like a video until she touches the phone ---------- */
 const tap=$('#tap'); let run=0, looping=false, yours=false;
 const hint=$('#ctrl-hint'), hintText=$('#ctrl-text');

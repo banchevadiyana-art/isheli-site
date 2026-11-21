@@ -5,11 +5,17 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ishéli — a new era of me</title>
 <meta name="description" content="A private space on your iPhone for short reflections, small practices, and finding your way back to yourself. Coming soon.">
-<link rel="icon" href="assets/favicon.png"><link rel="apple-touch-icon" href="assets/icon.png">
-<meta property="og:title" content="ishéli — a new era of me"><meta property="og:description" content="A private space on your iPhone for short reflections, small practices, and finding your way back to yourself. Coming soon."><meta property="og:image" content="https://isheli.app/assets/img/cover-sea.jpg"><meta property="og:url" content="https://isheli.app/"><link rel="canonical" href="https://isheli.app/">
+<link rel="icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<meta property="og:title" content="ishéli — a new era of me">
+<meta property="og:description" content="A private space on your iPhone for short reflections, small practices, and finding your way back to yourself. Coming soon.">
+<meta property="og:image" content="https://isheli.app/assets/img/cover-sea.jpg">
+<meta property="og:url" content="https://isheli.app/">
+<link rel="canonical" href="https://isheli.app/">
 <link rel="preload" href="assets/fonts/CormorantGaramond.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/DMSans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/v2.css"><script src="assets/consent.js" defer></script>
+<link rel="stylesheet" href="assets/v2.css">
+<script src="assets/consent.js" defer></script>
 </head>
 <body>
 
@@ -38,14 +44,14 @@
 </svg></div>
     <div class="cover-bottom">
       <div class="cover-text">
-        <span class="glass-pill"><span class="orb orb-xs" aria-hidden="true"></span>Coming soon to iPhone</span>
+        <span class="glass-pill"><svg class="pill-ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 5h3"/></svg>Coming to iPhone</span>
         <h1 id="cover-h">Ten quiet minutes<br>to hear your own voice again.</h1>
         <p class="cover-lead">A private space on your iPhone for short reflections, small practices, and finding your way back to yourself.</p>
         <div class="cover-ctas">
           <a class="btn btn-light" href="#join">Join the waitlist</a>
-          <a class="link-light" href="#try">Try a practice now <span aria-hidden="true">↓</span></a>
+          <a class="link-light" href="#try">Try your first practice <span aria-hidden="true">↓</span></a>
         </div>
-        <p class="cover-reassure">Free to join · Nothing charged today · Your words stay on your iPhone</p>
+        <p class="cover-reassure">Free to join · No payment today · What you write in the app stays on your iPhone</p>
       </div>
       <p class="eyebrow eyebrow-light cover-era">A new era of me.</p>
     </div>
@@ -58,7 +64,7 @@
     <div>
       <p class="eyebrow eyebrow-blue">Start where you are</p>
       <h2 id="try-h" class="h2">What feels heaviest<br>right now?</h2>
-      <p class="body">Pick one. There’s no wrong answer. This is a real first practice from the app.</p>
+      <p class="body">Pick one. There’s no wrong answer. This is how a first practice in the app begins.</p>
       <div class="chips" role="radiogroup" aria-label="What feels heaviest right now">
         <button class="chip" role="radio" aria-checked="true" data-k="myself-last">I keep putting myself last</button>
         <button class="chip" role="radio" aria-checked="false" data-k="own-rules">I live by rules I never chose</button>
@@ -72,6 +78,7 @@
       <div class="moment" aria-live="polite">
         <p class="caps-w">A moment for you</p>
         <p class="moment-line" id="moment-line">You don’t have to earn rest. Let’s start with one moment that belongs to you.</p>
+        <div class="moment-try"><p class="caps-w">One small thing to try</p><p><b id="moment-try-t">Put one thing for you first.</b> <span id="moment-try-d">Before you help anyone today, take five minutes that are only yours.</span></p></div>
         <div class="moment-meta">
           <div><b id="moment-title">Old rules</b><small>Chapter 1 · about 10 minutes</small></div>
           <button class="btn btn-cream" id="moment-begin">Begin this practice</button>
@@ -89,15 +96,15 @@
         <p class="eyebrow eyebrow-blue">Inside the app</p>
         <h2 id="app-h" class="h2">Ten minutes with yourself.<br>Try them right here.</h2>
       </div>
-      <p class="body">Watch one practice play through, then tap the phone and it’s yours: pick where to start, answer one question, read what comes back, and place your stone.</p>
+      <p class="body">Choose what’s on your mind. See where one question takes you. Tap the phone any time to try it yourself.</p>
     </div>
 
     <div class="app-stage">
       <ol class="app-steps" aria-label="What happens in a practice">
         <li data-step="notice"><span class="n">01</span><b>Notice</b><span>One question. Answer in a tap, or in your own words.</span></li>
-        <li data-step="understand"><span class="n">02</span><b>Understand</b><span>Your answer comes back in plain words. Never advice you didn’t ask for.</span></li>
-        <li data-step="try"><span class="n">03</span><b>Try</b><span>One small thing for tomorrow, then a stone for your cairn.</span></li>
-        <li data-step="echo"><span class="n">04</span><b>Echo</b><span>A line to carry through the day, in the centre of the app.</span></li>
+        <li data-step="understand"><span class="n">02</span><b>Understand</b><span>A short reflection on what you wrote. No unsolicited advice. Just space to find your own answers.</span></li>
+        <li data-step="try"><span class="n">03</span><b>Try</b><span>One small thing to try. One stone to mark your progress.</span></li>
+        <li data-step="echo"><span class="n">04</span><b>A thought to take with you</b><span>One sentence to carry into your day.</span></li>
       </ol>
 
       <div class="phone-wrap">
@@ -171,8 +178,8 @@
               <div class="seg"><button class="on" data-seg="words">Your words</button><button data-seg="echoes">Echoes</button></div>
               <div class="entries" id="mine-words">
                 <div class="entry"><p class="q">“An hour on Sunday that nobody can book.”</p><p class="meta">Last week</p></div>
-                <div class="entry"><p class="q">“Being useful felt like being loved.”</p><p class="meta">Day 3</p></div>
-                <div class="entry"><p class="q">“I rest when everything is done.”</p><p class="meta">Day 1</p></div>
+                <div class="entry"><p class="q">“Being useful felt like being loved.”</p><p class="meta">Later</p></div>
+                <div class="entry"><p class="q">“I rest when everything is done.”</p><p class="meta">At the beginning</p></div>
               </div>
               <div class="entries" id="mine-echoes" hidden>
                 <div class="entry"><p class="q">You don’t have to earn rest.</p><p class="meta">Kept from Echo</p></div>
@@ -226,7 +233,7 @@
               <div class="step" data-st="3">
                 <div class="try-wrap">
                   <p class="caps">One small thing to try</p>
-                  <h3 class="try-h" id="st-try">Keep the care, drop the cost</h3>
+                  <h3 class="try-h" id="st-try">Put one thing for you first</h3>
                   <p class="try-d" id="st-try-d">Write the old rule down. That’s all.</p>
                   <div class="cairn-drop" id="cairn-drop" aria-hidden="true"></div>
                   <p class="stone-msg" id="stone-msg" hidden>Your stone is placed.</p>
@@ -249,6 +256,7 @@
           <span class="tap" id="tap" aria-hidden="true"></span>
         </div>
         <div class="phone-ctrl">
+          <p class="demo-note">A browser demo. Nothing you tap or type here is saved.</p>
           <p class="ctrl-hint" id="ctrl-hint"><span class="live-dot" aria-hidden="true"></span><span id="ctrl-text">Playing · tap the phone to try it yourself</span></p>
           <button class="link-dark" id="reset">Replay</button>
         </div>
@@ -257,36 +265,23 @@
   </div>
 </section>
 
-<!-- 04 · Letter -->
-<section class="letter" aria-labelledby="letter-h">
-  <div class="wrap letter-grid">
-    <img class="arch" src="assets/img/closing.jpg" alt="A woman resting her hands on her body, eyes down">
-    <div>
-      <p class="eyebrow">A letter from Diyana</p>
-      <h2 id="letter-h" class="serif-xl">For the woman who looks after everyone,<br>and forgot to ask how she is.</h2>
-      <p class="body">You don’t have to become a better woman. Just come back to the one you already are. ishéli gives you ten quiet minutes, every other day, to do exactly that.</p>
-      <p class="sign"><span>Diyana</span> <em class="eyebrow">· Founder</em></p>
-    </div>
-  </div>
-</section>
-
 <div class="marquee" aria-hidden="true"><div class="marquee-track">
-  <span>ten quiet minutes</span><i>✦</i><span>every other day</span><i>✦</i><span>no streaks</span><i>✦</i><span>your words stay yours</span><i>✦</i><span>a new era of me</span><i>✦</i>
-  <span>ten quiet minutes</span><i>✦</i><span>every other day</span><i>✦</i><span>no streaks</span><i>✦</i><span>your words stay yours</span><i>✦</i><span>a new era of me</span><i>✦</i>
+  <span>ten quiet minutes</span><i>✦</i><span>at your own pace</span><i>✦</i><span>no streaks</span><i>✦</i><span>your words stay yours</span><i>✦</i><span>a new era of me</span><i>✦</i>
+  <span>ten quiet minutes</span><i>✦</i><span>at your own pace</span><i>✦</i><span>no streaks</span><i>✦</i><span>your words stay yours</span><i>✦</i><span>a new era of me</span><i>✦</i>
 </div></div>
 
 <!-- 05 · Seasons -->
 <section class="seasons" aria-labelledby="seasons-h">
   <div class="wrap">
     <div class="split-head">
-      <div><p class="eyebrow">A year that moves with you</p><h2 id="seasons-h" class="h2">Four seasons,<br>starting the day you begin.</h2></div>
-      <p class="body">Start with whichever is true today. Chapter 1 is free for everyone.</p>
+      <div><p class="eyebrow">A year that moves with you</p><h2 id="seasons-h" class="h2">Four seasons of<br>coming back to yourself.</h2></div>
+      <p class="body">Your year has four seasons of about three months each: you start with Body, Mind or Soul, the other two follow in the order you choose, and Whole brings them together at the end. Each season has three chapters, about a month each, and Chapter 1 is free for everyone.</p>
     </div>
     <div class="season-cards">
       <article><img class="arch" src="assets/img/body.jpg" alt="A woman with her arms raised, face to the light"><p class="tag"><i style="background:#CDB497"></i>Body</p><h3>Come home to your body</h3><p class="small">Rest that actually rests you.</p></article>
       <article><img class="arch" src="assets/img/mind.jpg" alt="A woman seen from behind, hair in a long ponytail"><p class="tag"><i style="background:#9FB8D6"></i>Mind</p><h3>Clear the noise</h3><p class="small">Decisions you trust.</p></article>
       <article><img class="arch" src="assets/img/soul.jpg" alt="A woman smiling with her eyes closed"><p class="tag"><i style="background:#B8A8D6"></i>Soul</p><h3>Make room for joy</h3><p class="small">Your own rules, your own voice.</p></article>
-      <article><img class="arch" src="assets/img/whole.jpg" alt="An older woman seen from behind, holding her arm"><p class="tag"><i style="background:#1A1A1A"></i>Whole</p><h3>All of you, together</h3><p class="small">One you, held together.</p></article>
+      <article><img class="arch" src="assets/img/whole.jpg" alt="An older woman seen from behind, holding her arm"><p class="tag"><i style="background:#1A1A1A"></i>Whole</p><h3>All of you, together</h3><p class="small">Every part of you belongs.</p></article>
     </div>
   </div>
 </section>
@@ -297,20 +292,21 @@
     <p class="eyebrow eyebrow-lilac">Built differently</p>
     <h2 id="built-h" class="h2">For women tired of trying harder.</h2>
     <div class="cols4">
-      <div><p class="eyebrow eyebrow-lilac">01</p><h3>Nothing resets.</h3><p class="small">No streaks, no guilt. Each practice places a stone.</p></div>
+      <div><p class="eyebrow eyebrow-lilac">01</p><h3>Nothing resets.</h3><p class="small">No streaks, no guilt. Each practice you finish adds a stone to your stack, a quiet record that you showed up.</p></div>
       <div><p class="eyebrow eyebrow-lilac">02</p><h3>Small on purpose.</h3><p class="small">One step you can actually take.</p></div>
-      <div><p class="eyebrow eyebrow-lilac">03</p><h3>Your words stay yours.</h3><p class="small">What you write stays on your iPhone. No account, nothing sold.</p></div>
-      <div><p class="eyebrow eyebrow-lilac">04</p><h3>No advice you didn’t ask for.</h3><p class="small">Good questions. Your own answers.</p></div>
+      <div><p class="eyebrow eyebrow-lilac">03</p><h3>Your words stay yours.</h3><p class="small">In the app, what you write is stored on your iPhone. No account, nothing sold.</p></div>
+      <div><p class="eyebrow eyebrow-lilac">04</p><h3>No unsolicited advice.</h3><p class="small">Just space to find your own answers.</p></div>
     </div>
     <div class="proof">
       <div>
-        <p class="eyebrow eyebrow-lilac">Fifteen practices later</p>
+        <p class="eyebrow eyebrow-lilac">See how your words change</p>
         <h2 class="h2">Same you.<br>Your own rules.</h2>
         <p class="body">At the end of every chapter, ishéli puts your first words beside your newest ones.</p>
       </div>
       <div class="proof-cards">
-        <div class="pc faded"><p class="eyebrow">Day 1 · The rule I lived by</p><p class="q">“I rest when everything is done.”</p></div>
-        <div class="pc pc-photo" style="background-image:url(assets/img/whole.jpg)"><div class="pc-glass"><p class="caps-w">Day 29 · My own rule</p><p class="q">“I rest before I’m empty.”</p></div></div>
+        <div class="pc faded"><p class="eyebrow">At the beginning · The rule I lived by</p><p class="q">“I rest when everything is done.”</p></div>
+        <div class="pc pc-photo" style="background-image:url(assets/img/whole.jpg)"><div class="pc-glass"><p class="caps-w">Later · My own rule</p><p class="q">“I rest before I’m empty.”</p></div></div>
+        <p class="pc-note">Illustrative example, not a real user’s words.</p>
       </div>
     </div>
   </div>
@@ -322,30 +318,32 @@
     <div class="split-head">
       <div>
         <p class="eyebrow eyebrow-blue">Founding membership</p>
-        <h2 id="founding-h" class="h2">Your first season is on us.<br>Nothing to pay today.</h2>
+        <h2 id="founding-h" class="h2">Your first three months are on us.</h2>
       </div>
-      <p class="body">Everyone who joins before launch is a founding member. Your first season, three months, is free. Then €29.99 a year or €4.99 a month, and that price stays yours for as long as you’re a member. No limited places, no rush.</p>
+      <p class="body">Join before launch and get your founding code on launch day.</p>
+    </div>
+    <div class="offer2">
+      <div class="o-col o-free"><span class="o-big">€0</span><p class="o-lab">for your first 3 months</p></div>
+      <div class="o-col"><p class="eyebrow">Then yearly</p><span class="o-price">€29.99</span><p class="o-lab">a year</p></div>
+      <div class="o-col"><p class="eyebrow">Or monthly</p><span class="o-price">€4.99</span><p class="o-lab">a month</p></div>
+      <p class="o-note">Your founding price stays yours while your subscription remains active.</p>
     </div>
     <ol class="timeline">
-      <li><p class="eyebrow dot dark">Today</p><h3>You join the waitlist</h3><p class="small">Free. We keep only your email. Nothing is charged.</p></li>
-      <li><p class="eyebrow dot">Before launch</p><h3>A practice to try, then quiet</h3><p class="small">One small practice now, then one quiet letter a month.</p></li>
-      <li><p class="eyebrow dot">Launch day</p><h3>Your founding code arrives</h3><p class="small">iPhone first. One tap opens the App Store and your free season begins.</p></li>
-      <li><p class="eyebrow dot">After three months</p><h3>You decide</h3><p class="small">€29.99 a year or €4.99 a month, your founding price for as long as you stay. We remind you a week before your free season ends. Cancel any time in your iPhone settings.</p></li>
+      <li><p class="eyebrow dot dark">Today</p><h3>Join the waitlist</h3><p class="small">Free. Nothing to pay.</p></li>
+      <li><p class="eyebrow dot">Before launch</p><h3>Launch updates</h3><p class="small">A first practice to try and about one short letter a month.</p></li>
+      <li><p class="eyebrow dot">Launch day</p><h3>Your founding code</h3><p class="small">Redeem it in the App Store and choose yearly or monthly.</p></li>
+      <li><p class="eyebrow dot">After 3 months</p><h3>Your membership continues</h3><p class="small">At your founding price, unless you cancel.</p></li>
     </ol>
-    <div class="offer">
-      <div>
-        <p class="eyebrow eyebrow-blue">Founding members · everyone who joins before launch</p>
-        <p class="offer-h">Your first season, free</p>
-        <p class="body">Then €29.99 a year or €4.99 a month. Your price, for as long as you stay.</p>
-      </div>
-      <div class="offer-r"><span class="offer-zero">€0</span><p class="eyebrow">For your first three months</p><p class="tiny">After launch: €39.99 a year or €6.99 a month</p></div>
-    </div>
     <form class="join" data-src="founding" novalidate>
       <input type="email" name="email" required autocomplete="email" placeholder="Your email" aria-label="Your email">
-      <button class="btn btn-dark" type="submit">Save my founding place</button>
+      <button class="btn btn-dark" type="submit">Join as a founding member</button>
     </form>
     <p class="join-note" role="status" aria-live="polite"></p>
-    <p class="tiny">Free to join. Nothing is charged. Unsubscribe in one click, never sold. Chapter 1 is free for everyone. After launch, ishéli is €39.99 a year (€3.33 a month, billed yearly) or €6.99 a month. Founding members get their first three months free, then €29.99 a year or €4.99 a month for as long as they stay. Cancel any time in your iPhone settings.</p>
+    <p class="tiny">By joining you’ll receive launch updates and about one letter a month from Diyana. Unsubscribe any time. Your email is never sold. <a href="privacy.html#our-website-and-waitlist">Privacy</a></p>
+    <details class="renew-box">
+      <summary class="eyebrow">Subscription details: free months, renewal and cancelling</summary>
+      <p class="small">On launch day you redeem your founding code in the App Store and choose yearly (€29.99) or monthly (€4.99). The first 3 months are free. After that, your subscription renews automatically at the price you chose, charged to your Apple Account, until you cancel. To avoid being charged, cancel at least 24 hours before the free months end in Settings › your name › Subscriptions. If you allow notifications, the app also reminds you a week before. After launch, without a founding code, ishéli is €39.99 a year or €6.99 a month, and Chapter 1 is free for everyone.</p>
+    </details>
   </div>
 </section>
 
@@ -355,12 +353,26 @@
     <p class="eyebrow">Questions</p>
     <h2 id="q-h" class="h2">Before you join</h2>
     <div class="faq">
-      <details open><summary>What exactly is ishéli?</summary><p>An iPhone app for short, guided reflection. Every other day, one question, a reflection in plain words, and one small thing to try. About ten minutes.</p></details>
-      <details><summary>Do I pay anything now?</summary><p>No. Joining the waitlist is free and charges nothing. As a founding member, your first season in the app is free too.</p></details>
+      <details open><summary>What exactly is ishéli?</summary><p>An iPhone app for short, guided reflection. At your own pace: one question, a reflection in plain words, and one small thing to try. About ten minutes.</p></details>
+      <details><summary>Do I pay anything now?</summary><p>No. Joining the waitlist is free and needs no payment. You only start a subscription if you redeem your founding code in the App Store after launch.</p></details>
       <details><summary>When will I get access?</summary><p>Soon, on iPhone first. Your code arrives by email on launch day. Android later: join and you’ll hear the day it’s ready.</p></details>
-      <details><summary>What happens to what I write?</summary><p>It stays on your iPhone. No account, no server reading it. Delete everything any time. The waitlist keeps only your email.</p></details>
-      <details><summary>What happens after the free season?</summary><p>You choose €29.99 a year or €4.99 a month, and as a founding member that price never goes up while you stay. We remind you a week before your free season ends, and you can cancel any time in your iPhone settings.</p></details>
+      <details><summary>What happens to what I write?</summary><p>In the app, what you write is stored on your iPhone. There’s no account, and nothing you write is sent to us. If you back up your iPhone, Apple’s backup may include it. You can delete everything in the app at any time. The waitlist keeps only your email address.</p></details>
+      <details><summary>What happens after the 3 free months?</summary><p>Your subscription renews automatically at your founding price, €29.99 a year or €4.99 a month, until you cancel. Cancel at least 24 hours before the free months end in Settings › your name › Subscriptions to avoid being charged. Your founding price stays yours while your subscription remains active.</p></details>
       <details><summary>Is this therapy?</summary><p>No. ishéli is a companion for reflection, not medical or psychological care. In an emergency, call your local emergency number.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 04 · Letter -->
+<section class="letter" aria-labelledby="letter-h">
+  <div class="wrap letter-grid">
+    <img class="arch" src="assets/img/closing.jpg" alt="A woman resting her hands on her body, eyes down">
+    <div>
+      <p class="eyebrow">A note from Diyana</p>
+      <h2 id="letter-h" class="serif-xl">For the woman who takes care of so much, but rarely asks herself how she’s doing.</h2>
+      <p class="body">You don’t have to become a better woman. Just come back to the one you already are.</p>
+      <p class="body">I made ishéli after a time when I was good at everything except listening to myself. Ten quiet minutes, at my own pace, helped me find my way back. I hope they do the same for you.</p>
+      <p class="sign"><span>Diyana</span> <em class="eyebrow">· Founder</em></p>
     </div>
   </div>
 </section>
@@ -369,17 +381,18 @@
 <section class="joinsec" id="join" aria-labelledby="join-h">
   <div class="join-photo"><img src="assets/img/dune.jpg" alt="A woman sitting on a dune, eyes closed, face turned to the light"></div>
   <div class="join-in">
-    <p class="eyebrow">Hello, it’s you</p>
     <h2 id="join-h" class="serif-hero">A new<br>era of me.</h2>
-    <p class="body">The voice you stopped listening to is still here. Join before launch: your first season is free, and your founding price stays yours.</p>
+    <p class="body">The voice you stopped listening to is still here. Join before launch and your first three months are free.</p>
     <form class="join" data-src="join" novalidate>
       <input type="email" name="email" required autocomplete="email" placeholder="Your email" aria-label="Your email">
       <button class="btn btn-dark" type="submit">Join the waitlist</button>
     </form>
     <p class="join-note" role="status" aria-live="polite"></p>
-    <p class="tiny">Free to join. We keep only your email. Never sold.</p>
+    <p class="tiny">Free to join. Launch updates and about one letter a month. Unsubscribe any time. <a href="privacy.html#our-website-and-waitlist">Privacy</a></p>
   </div>
 </section>
+
+
 </main>
 
 <footer class="foot">
