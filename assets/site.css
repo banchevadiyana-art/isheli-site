@@ -448,3 +448,6 @@ form.join.joined{display:none}
 .closing .passon-btn:hover{border-color:var(--ink)}
 @media (max-width:520px){.passon-card{padding:12px 12px 12px 16px}.passon-tx b{font-size:20px}.passon-btns{gap:6px}.passon-btn{width:40px;height:40px}}
 @media (prefers-reduced-motion:reduce){.passon{transition:none;opacity:1;transform:none}.passon-tick path{animation:none;stroke-dashoffset:0}}
+
+.rhythm{max-width:640px;margin:14px 0 8px}
+.price-clear{max-width:640px;margin:22px 0 0;font-size:14px;line-height:1.6;color:rgba(251,248,243,.78)}
