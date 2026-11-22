@@ -677,3 +677,16 @@ details.renew-box summary::after{content:"+";font:300 22px/1 var(--sans);color:#
 details.renew-box[open] summary::after{transform:rotate(45deg)}
 details.renew-box summary:focus-visible{outline:2px solid #7A6556;outline-offset:4px;border-radius:4px}
 details.renew-box .small{margin-top:12px}
+
+/* analytics consent box (consent.js) */
+.consent{position:fixed;left:16px;bottom:16px;z-index:80;max-width:320px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:12px 12px 12px 16px;border-radius:20px;background:rgba(247,243,238,.92);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border:1px solid rgba(46,38,32,.12);box-shadow:0 10px 30px rgba(46,38,32,.14);opacity:0;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease}
+.consent.on{opacity:1;transform:none}
+.consent p{margin:0;flex:1 1 160px;font:400 13px/1.45 "DM Sans",system-ui,sans-serif;color:#5C4C40}
+.consent a{color:#2E2620;text-underline-offset:2px}
+.consent div{display:flex;gap:6px;margin-left:auto}
+.consent button{font:500 13px/1 "DM Sans",system-ui,sans-serif;padding:9px 14px;border-radius:999px;cursor:pointer;border:1px solid rgba(46,38,32,.25);background:transparent;color:#2E2620}
+.consent button[data-v="yes"]{background:#2E2620;border-color:#2E2620;color:#F7F3EE}
+.consent button:focus-visible{outline:2px solid #2E2620;outline-offset:2px}
+@media (max-width:520px){.consent{left:10px;right:10px;bottom:10px;max-width:none;flex-wrap:nowrap}.consent p{flex:1 1 auto;font-size:12.5px}}
+@media (prefers-reduced-motion:reduce){.consent{transition:none}}
+@media print{.consent{display:none}}

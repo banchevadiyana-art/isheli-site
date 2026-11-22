@@ -1,10 +1,10 @@
 /* ishéli · analytics consent
-   Google Analytics 4 loads only after a clear "Accept". Nothing is set before that:
+   Google Tag Manager (which loads Google Analytics 4) loads only after a clear "Accept". Nothing is set before that:
    no gtag, no cookies, no request to Google. "Decline" is as easy as "Accept".
    The choice is kept on this device for 6 months (localStorage, not a cookie).
    A browser sending Global Privacy Control is treated as "Decline" and never asked. */
 (function () {
-  var GA_ID = "";            // e.g. "G-XXXXXXXXXX" from Google Analytics → Admin → Data streams
+  var GTM_ID = "GTM-5RVLJRR3"; // Google Tag Manager container; GA4 is configured inside it
   var KEY = "ish.consent";   // {v:"yes"|"no", t:timestamp}
   var MAX_AGE = 1000 * 60 * 60 * 24 * 182;
 
@@ -28,18 +28,25 @@
 
   var loaded = false;
   function loadGA() {
-    if (loaded || !GA_ID) return; loaded = true;
+    if (loaded || !GTM_ID) return; loaded = true;
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { dataLayer.push(arguments); };
-    gtag("js", new Date());
-    gtag("config", GA_ID, { anonymize_ip: true, allow_google_signals: false, allow_ad_personalization_signals: false });
+    /* Only analytics is allowed: no ads, no ad personalisation. */
+    gtag("consent", "default", { analytics_storage: "granted", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied" });
+    dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
     var s = document.createElement("script"); s.async = true;
-    s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
+    s.src = "https://www.googletagmanager.com/gtm.js?id=" + encodeURIComponent(GTM_ID);
     document.head.appendChild(s);
   }
 
-  /* Events from the page: ishTrack("sign_up", {...}). Silently dropped without consent. */
-  window.ishTrack = function (name, params) { if (loaded && window.gtag) gtag("event", name, params || {}); };
+  /* Events from the page: ishTrack("generate_lead", {...}) becomes a dataLayer event for GTM.
+     Silently dropped without consent. */
+  window.ishTrack = function (name, params) {
+    if (!loaded) return;
+    var e = { event: name }; params = params || {};
+    for (var k in params) if (Object.prototype.hasOwnProperty.call(params, k)) e[k] = params[k];
+    window.dataLayer.push(e);
+  };
 
   var bar = null;
   function hide() { if (bar) { bar.classList.remove("on"); var b = bar; setTimeout(function () { b.remove(); }, 250); bar = null; } }
@@ -49,7 +56,7 @@
     else { clearGaCookies(); if (loaded) location.reload(); }
   }
   function show() {
-    if (bar || !GA_ID) return;
+    if (bar || !GTM_ID) return;
     bar = document.createElement("div");
     bar.className = "consent"; bar.setAttribute("role", "region"); bar.setAttribute("aria-label", "Analytics choice");
     bar.innerHTML =
@@ -62,7 +69,7 @@
 
   function init() {
     document.querySelectorAll("[data-consent-settings]").forEach(function (a) {
-      if (!GA_ID) { a.hidden = true; return; }
+      if (!GTM_ID) { a.hidden = true; return; }
       a.addEventListener("click", function (e) { e.preventDefault(); show(); });
     });
     if (navigator.globalPrivacyControl) return;          // treated as "no"; never asked
