@@ -37,7 +37,7 @@ addEventListener('scroll',onScroll,{passive:true}); onScroll();
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
 $$('.h2,.serif-xl,.moment,.season-cards article,.cols4>div,.pc,.timeline li,.offer').forEach(el=>{el.classList.add('reveal');io.observe(el)});
 
-function siteToast(t,d){const el=$('#site-toast');el.innerHTML='<b>'+t+'</b>'+d;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),4200);}
+function siteToast(t,d){const el=$('#site-toast');el.innerHTML='<b>'+t+'</b>'+d;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),8000);}
 
 /* try section */
 let picked='myself-last';
@@ -68,7 +68,7 @@ $$('form.join').forEach(f=>{
         const body='email='+encodeURIComponent(email)+'&userGroup=website'+'&mailingLists=';
         const r=await fetch('https://app.loops.so/api/newsletter-form/'+FORM_ID,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body});
         let d={};try{d=await r.json()}catch(_){}
-        if(r.ok&&d.success!==false){ siteToast('You’re on the list','Check your inbox and tap “Confirm” — then your founding place is saved.'); window.ishTrack&&ishTrack('generate_lead',{method:'waitlist',demo_completed:!!window.__ishDemoDone}); }
+        if(r.ok&&d.success!==false){ siteToast('Thank you, you’re on the list','New here? Check your inbox (and spam) and tap “Confirm” to save your founding place. Already joined? You’re all set.');note.textContent='New here? Check your inbox (and spam) and tap “Confirm”. Already joined? You’re all set.'; window.ishTrack&&ishTrack('generate_lead',{method:'waitlist',demo_completed:!!window.__ishDemoDone}); }
         else if((d.message||'').toLowerCase().includes('already')) siteToast('You’re already on the list','Nothing else to do. Your founding code comes on launch day.');
         else siteToast('That didn’t go through','Please try again in a moment, or write to hello@isheli.app.');
       }
