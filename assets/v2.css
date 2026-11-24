@@ -690,3 +690,9 @@ details.renew-box .small{margin-top:12px}
 @media (max-width:520px){.consent{left:10px;right:10px;bottom:10px;max-width:none;flex-wrap:nowrap}.consent p{flex:1 1 auto;font-size:12.5px}}
 @media (prefers-reduced-motion:reduce){.consent{transition:none}}
 @media print{.consent{display:none}}
+
+/* footer Instagram link */
+.foot-wm{display:flex;align-items:center;gap:28px}
+.foot-ig{display:inline-flex;align-items:center;gap:8px;color:#5C4C40;text-decoration:none;font:500 13px var(--sans);letter-spacing:.02em}
+.foot-ig:hover{color:#2E2620}
+.foot-ig:focus-visible{outline:2px solid #2E2620;outline-offset:4px;border-radius:6px}
